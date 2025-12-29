@@ -84,24 +84,24 @@ AVLNode* avlInsert(AVLNode* node, int key) {
     int balance = getBalance(node);
 
 
-    // LL
+    
     if (balance > 1 && key < node->left->key)
         return rightRotate(node);
 
 
-    // RR
+    
     if (balance < -1 && key > node->right->key)
         return leftRotate(node);
 
 
-    // LR
+    
     if (balance > 1 && key > node->left->key) {
         node->left = leftRotate(node->left);
         return rightRotate(node);
     }
 
 
-    // RL
+    
     if (balance < -1 && key < node->right->key) {
         node->right = rightRotate(node->right);
         return leftRotate(node);
@@ -138,3 +138,4 @@ void inorderTraversal(AVLNode* root) {
     inorderTraversal(root->right);
 
 }
+
