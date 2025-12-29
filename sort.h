@@ -6,7 +6,7 @@ typedef struct {
     int id;
     char title[100];
     char author[100];
-    int isActive;   // 1 = aktif 0 = lazy delete 
+    int isActive;    
 } Book;
 
 
@@ -16,3 +16,4 @@ int binarySearchBooks(Book arr[], int size, int id);
 
 
 #endif
+
