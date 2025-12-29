@@ -45,5 +45,6 @@ int trieSearchPrefix(TrieNode* root, const char* prefix) {
             return 0;
         current = current->children[index];
     }
-    return 1;   // prefix bulundu
+    return 1;   
+
 }
