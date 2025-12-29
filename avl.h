@@ -3,7 +3,7 @@
 
 
 typedef struct AVLNode {
-    int key;                // kitap ID
+    int key;                
     int height;
     struct AVLNode *left;
     struct AVLNode *right;
@@ -14,6 +14,7 @@ typedef struct AVLNode {
 AVLNode* avlInsert(AVLNode* node, int key);
 AVLNode* avlSearch(AVLNode* root, int key);
 void inorderTraversal(AVLNode* root);
+
 
 
 #endif
