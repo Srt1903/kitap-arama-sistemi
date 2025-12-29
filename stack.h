@@ -14,7 +14,7 @@ typedef enum {
 
 typedef struct {
     ActionType type;
-    int index;   // ilgili kitap index’i
+    int index;   
 } Action;
 
 
@@ -28,6 +28,7 @@ void initStack(Stack* s);
 int isEmpty(Stack* s);
 void push(Stack* s, Action a);
 Action pop(Stack* s);
+
 
 
 #endif
