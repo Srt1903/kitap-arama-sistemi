@@ -3,9 +3,6 @@
 #include "avl.h"
 
 
-/* Yardımcı fonksiyonlar */
-
-
 int height(AVLNode *n) {
     return n ? n->height : 0;
 }
@@ -80,7 +77,7 @@ AVLNode* avlInsert(AVLNode* node, int key) {
     else if (key > node->key)
         node->right = avlInsert(node->right, key);
     else
-        return node; // duplicate yok
+        return node; 
 
 
     node->height = 1 + max(height(node->left), height(node->right));
@@ -131,7 +128,7 @@ AVLNode* avlSearch(AVLNode* root, int key) {
 }
 
 
-/* Inorder traversal (test + rapor için) */
+/* Inorder traversal */
 
 
 void inorderTraversal(AVLNode* root) {
@@ -139,4 +136,5 @@ void inorderTraversal(AVLNode* root) {
     inorderTraversal(root->left);
     printf("%d ", root->key);
     inorderTraversal(root->right);
+
 }
