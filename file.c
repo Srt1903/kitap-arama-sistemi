@@ -12,7 +12,7 @@ int loadBooksFromCSV(const char* filename, Book books[]) {
     int count = 0;
 
 
-    fgets(line, sizeof(line), file); // header atla
+    fgets(line, sizeof(line), file); 
 
 
     while (fgets(line, sizeof(line), file)) {
@@ -27,4 +27,5 @@ int loadBooksFromCSV(const char* filename, Book books[]) {
 
     fclose(file);
     return count;
+
 }
