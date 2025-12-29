@@ -112,7 +112,7 @@ void deleteBookLazy() {
         if (books[i].id == id && books[i].isActive) {
             books[i].isActive = 0;
             push(&actionStack, (Action){ACTION_DELETE, i});
-            printf("Kitap silindi (lazy).\n");
+            printf("Kitap silindi.\n");
             return;
         }
     }
@@ -151,8 +151,8 @@ void menu() {
     printf("\n===== KITAP SISTEMI =====\n");
     printf("1. Listele\n");
     printf("2. Kitap ekle\n");
-    printf("3. Kitap sil (lazy)\n");
-    printf("4. UNDO\n");
+    printf("3. Kitap sil\n");
+    printf("4. Geri al (Undoo)\n");
     printf("0. Cikis\n");
     printf("Secim: ");
 }
@@ -187,4 +187,5 @@ int main() {
 
 
     return 0;
+
 }
